@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <md-toolbar class="md-accent">
+    <md-toolbar class="calc-toolbar">
       <h3 class="toolbar-title md-title">Month Calculator</h3>
     </md-toolbar>
     <router-view/>
@@ -22,6 +22,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.calc-toolbar {
+  background-color: #fff !important;
 }
 
 .toolbar-title {
