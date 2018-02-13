@@ -4,11 +4,11 @@
       <md-card-content>
         <h2><span>Months Remaining:</span> {{monthsRemaining}}</h2>
         <h3><span>2 Years Left On:</span> {{twoYearsLeftText}}<br> {{twoYearsLeftDate}}</h3>
-        <md-datepicker v-model="startDate">
-          <label>Start Date</label>
+        <md-datepicker v-model="startDate" :md-open-on-focus="openOnFocus" :md-override-native="overrideNative">
+          <label>Today's Date</label>
         </md-datepicker>
 
-        <md-datepicker v-model="endDate">
+        <md-datepicker v-model="endDate" :md-open-on-focus="openOnFocus" :md-override-native="overrideNative">
           <label>End Date</label>
         </md-datepicker>
 
@@ -24,10 +24,12 @@ export default {
   data () {
     return {
       startDate: new Date(),
-      endDate: new Date(),
+      endDate: null,
       monthsRemaining: null,
       twoYearsLeftText: null,
-      twoYearsLeftDate: null
+      twoYearsLeftDate: null,
+      openOnFocus: false,
+      overrideNative: false
     }
   },
   methods: {
