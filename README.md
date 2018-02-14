@@ -1,3 +1,5 @@
+Check out the demo here: [http://months.erichie.com](http://months.erichie.com)
+
 # month-calculator
 
 > Calculate how many months are between 2 dates.
